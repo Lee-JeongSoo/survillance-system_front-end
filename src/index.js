@@ -6,8 +6,6 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  //개발에서만 뜨는 경고 기능
-  //기능 지원 중단된 기능을 사용했을때 경고 설정
   <React.StrictMode>
     <App />
   </React.StrictMode>
