@@ -1,0 +1,30 @@
+/* Navbar.css */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: white; /* 기본 링크 색상 */
+  text-decoration: none;
+}
+
+.nav-title {
+  color: #4CAF50; /* "My Website" 링크의 색상 */
+  font-size: 20px; /* "My Website" 링크의 글자 크기 */
+}
+body {
+  font-family: 'normal', sans-serif;
+}
