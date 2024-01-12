@@ -1,7 +1,7 @@
 import React from 'react';
-import './info.css'; // info.css 파일을 import
+import './Info.css'; // info.css 파일을 import
 
-function info() {
+function Info() {
   return (
     <div className="info-container">
       <div className="info-text">
@@ -12,6 +12,13 @@ function info() {
           <li>항목 1</li>
           <li>항목 2</li>
           <li>항목 3</li>
+          <li>항목 3</li>
+          <li>항목 3</li>
+          <li>항목 3</li>
+          <li>항목 3</li>
+          <li>항목 3</li>
+          <li>항목 3</li>
+          <li>항목 3</li>
           {/* 필요한 만큼 항목을 추가하세요 */}
         </ul>
       </div>
@@ -19,4 +26,4 @@ function info() {
   );
 }
 
-export default info;
+export default Info;
