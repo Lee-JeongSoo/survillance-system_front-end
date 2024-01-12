@@ -1,0 +1,13 @@
+/* info.css (또는 원하는 CSS 파일에 적용) */
+.info-container {
+    display: flex; /* 컨테이너를 플렉스 박스로 설정 */
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    height: 100vh; /* 화면 높이 전체를 차지하도록 설정 (선택사항) */
+  }
+  
+  .info-text {
+    text-align: center; /* 가로 가운데 정렬 */
+    font-size: 24px; /* 원하는 폰트 크기 설정 */
+  }
+  

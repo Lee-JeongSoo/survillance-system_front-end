@@ -7,8 +7,8 @@ function Navbar() {
   return (
     <nav className="navbar">
       <ul className="nav-links">
-        <li>
-          <Link to="/" className="nav-title">SURVEILLANCE SYSTEM</Link>
+        <li className="nav-title">
+          <Link to="/">SURVEILLANCE SYSTEM</Link>
         </li>
         <li>
           <Link to="/info">사용방법</Link>
