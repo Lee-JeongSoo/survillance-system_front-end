@@ -1,5 +1,6 @@
+// Info.js
 import React from 'react';
-import './Info.css'; // info.css 파일을 import
+import './info.css'; // info.css 파일을 import
 
 function Info() {
   return (
@@ -11,13 +12,6 @@ function Info() {
         <ul>
           <li>항목 1</li>
           <li>항목 2</li>
-          <li>항목 3</li>
-          <li>항목 3</li>
-          <li>항목 3</li>
-          <li>항목 3</li>
-          <li>항목 3</li>
-          <li>항목 3</li>
-          <li>항목 3</li>
           <li>항목 3</li>
           {/* 필요한 만큼 항목을 추가하세요 */}
         </ul>

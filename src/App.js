@@ -1,9 +1,9 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
-import info from './Components/Info';
+import Info from './Components/Info';
 import Mapping from './Components/Mapping';
 import Simulation from './Components/Simulation';
 
