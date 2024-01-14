@@ -11,7 +11,7 @@ function Navbar() {
           <Link to="/">SURVEILLANCE SYSTEM</Link>
         </li>
         <li>
-          <Link to="/info">사용방법</Link>
+          <Link to="/Info">사용방법</Link>
         </li>
         <li>
           <Link to="/Mapping">디지털 모델링</Link>

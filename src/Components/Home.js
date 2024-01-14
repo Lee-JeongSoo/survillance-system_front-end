@@ -1,7 +1,12 @@
 import React from 'react';
 
 function Home() {
-  return <div>Home</div>;
+  
+  return (
+  <div>
+    <h1>홈화면 입니다.</h1>
+  </div>
+  )
 }
 
 export default Home;

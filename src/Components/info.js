@@ -1,6 +1,6 @@
 // Info.js
 import React from 'react';
-import './info.css'; // info.css 파일을 import
+import './Info.css'; // info.css 파일을 import
 
 function Info() {
   return (
