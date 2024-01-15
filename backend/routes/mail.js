@@ -1,9 +1,5 @@
 const nodemailer = require('nodemailer'); // 설치한 nodemailer 사용
 const senderInfo = require('../config/senderInfo.json');
-// const fs = require('fs');
-// // mailContent.html 파일 읽기
-// const htmlContent = fs.readFileSync('mailContent.html', 'utf8');
-
 // sender 정보는 config\senderInfo.json에 작성함
 
 const email ={
@@ -17,15 +13,17 @@ const email ={
 }
 
 //비동기 방식으로 메일 전송
-const send = async (data) =>{
-    nodemailer.createTransport(email).sendMail(data, function(error , info){
-        if(error){
-            console.log(error);
-        }else{
-            console.log(info);
-            return info.response;
-        }
-    });
+
+const sendMail = async (data) => {
+    try {
+        let transporter = nodemailer.createTransport(email);
+        let info = await transporter.sendMail(data);
+        console.log(info);
+        return info.response;
+    } catch (error) {
+        console.log(error);
+        throw error; // 오류 발생시 throw를 통해 상위로 전파
+    }
 };
 
 
@@ -37,4 +35,4 @@ const content = {
     html: "<h2>지능형 융합보안 시뮬레이션 시스템 테스트를 위한 메일 전송</h2>"
 }
 
-send(content);
+sendMail(content);

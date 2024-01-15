@@ -1,11 +1,41 @@
-    <%-include('header.ejs')%>
+<%-include('header.ejs')%>
 
-        <h3>시뮬레이션 수행하기</h3>
-        <ul>
-            <li>이름: <input type="text" name="name"required></li>
-            <li>이메일: <input type="text" name="email"required></li>
-            <li>메모: <br>
-            <textarea name="memo" cols="50" rows="10"></textarea></li>
-        </ul>
-        <button>다음으로</button>
-    <%-include('footer.ejs')%>
+<h3>시뮬레이션 의뢰 정보 확인</h3>
+<ul>
+    <li>이름: <%= simulationData.name %></li>
+    <li>이메일: <%= simulationData.email %></li>
+    <li>메모: <%= simulationData.memo %></li>
+    <li>업로드된 파일: <%= simulationData.fileName %></li>
+</ul>
+
+<!-- 사용자가 확인할 수 있는 버튼 -->
+<button onclick="sendMail()">확인</button>
+
+<script>
+    function sendMail() {
+        fetch('/sendMail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: "<%= simulationData.name %>",
+                email: "<%= simulationData.email %>",
+                memo: "<%= simulationData.memo %>",
+                fileName: "<%= simulationData.fileName %>"
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('메일 전송 완료: ' + data.message);
+            window.location.href = '/'; // 서버 응답 후 홈으로 리디렉션
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('메일 전송 중 오류가 발생했습니다.');
+            window.location.href = '/'; // 오류 발생 시에도 홈으로 리디렉션
+        });
+    }
+</script>
+
+<%-include('footer.ejs')%>
